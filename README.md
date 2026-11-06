@@ -1,16 +1,22 @@
 # PyAEDT-MCP Hardening Kit
 
+**已发布预览版：[v1.4.0-rc1](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1)**
+
+[下载 ZIP 安装包](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/download/v1.4.0-rc1/pyaedt-mcp-hardening-kit-v1.4.0-rc1.zip) · [下载 SHA256 校验文件](https://raw.githubusercontent.com/Hawse1337/pyaedt-mcp-hardening-kit/main/checksums/v1.4.0-rc1.sha256) · [查看发行说明](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1)
+
+这是候选预览版（Pre-release），完整求解与长跑回归尚未完成。
+
 Reliability patches for a pinned legacy AEDT MCP: bounded startup, timeout recovery, project guards, and solve evidence.
 
 **针对 [CAE-Agent-Hub / AEDT MCP](https://github.com/Cai-aa/CAE-Agent-Hub/tree/194ef498e6efb1984cd65325e21e71087588a581/MCP/Ansys/AEDT%20MCP) 的固定旧版本；不是完整 MCP 服务，也不表示兼容所有同名项目。**
 
 | 项目 | 当前状态 |
 |---|---|
-| 版本 | `v1.4.0-rc1`，候选源码，完整求解与长跑实机回归尚未完成 |
+| 版本 | 已发布候选版 [v1.4.0-rc1](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1) |
 | 上游 | `Cai-aa/CAE-Agent-Hub`，提交 `194ef498e6efb1984cd65325e21e71087588a581` |
 | 许可证 | [MIT](LICENSE)，保留上游 `Thompson Labs` 署名 |
 | 验证 | 267 项离线测试；独立 AEDT 2026 R1 无界面连接烟测 |
-| 发行说明 | [Release 正文与附件说明](docs/RELEASE_DRAFT.md) |
+| 发行说明 | [已发布的发行版及附件](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1) |
 
 新用户先看 [取得正确的目标服务](UPSTREAM.md)，再按下面步骤安装。`--repo` 指上游 **MCP/Ansys/AEDT MCP** 子目录，不是本补丁目录。
 

@@ -6,9 +6,9 @@
 |---|---|
 | 公开仓库与初始 README | 已创建，无需再建第二个同名仓库 |
 | 完整源码与说明上传 | 已上传并核验 43 个文件；[首次完整提交](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/commit/8a920ca228b4c466675157d51630eb4d9b817380) |
-| GitHub Release | 尚未发布；上传源码不等于已发布发行版 |
+| GitHub Release | 已发布 [v1.4.0-rc1 预览版](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1) |
 
-本次使用 GitHub 接口上传源码。当前连接器没有创建发行版的接口，因此最后可能需要你在 Releases 页面按第 5 节完成发布。
+本次源码通过 GitHub 接口上传，发行版已由你在网页完成发布。第 5 节保留为以后发布新版本的操作教程。
 
 ## 1. 先认清四个名称
 
@@ -140,3 +140,9 @@ Get-Content .\pyaedt-mcp-hardening-kit-v1.4.0-rc1.zip.sha256
 **如何知道第一次发布完成？** 首页能浏览源码并正确显示说明，Releases 中能看到带 Pre-release 标记的版本，附件可以重新下载且校验一致，才构成这次候选发布的交付结果。私有仓库还需要给访问者权限；公开仓库则可让未登录者打开项目链接核对。
 
 日常小改动只需提交；准备一批可交付的修改时再发新版本。遇到问题可先记录复现步骤、运行版本和错误摘要，再创建 Issue，不必把全部工程和原始日志都公开。
+
+## 9. 为什么网址里有 tag
+
+`/releases/tag/v1.4.0-rc1` 是 GitHub 的正常发行版地址。其中 `tag` 是固定路径，版本号是后面的 `v1.4.0-rc1`；首页的 `Tags` 入口也是标签导航。Release 基于标签标记的某次提交，不能通过改掉网址中的 `tag` 来设置版本。
+
+本次发布的标签和 ZIP 均正确。独立校验文件也已放在仓库 [checksums/v1.4.0-rc1.sha256](../checksums/v1.4.0-rc1.sha256)，可从首页下载；这不表示该校验文件已经作为 Release Assets 上传。

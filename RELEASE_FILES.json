@@ -11,6 +11,7 @@
   "RELEASE_FILES.json",
   "UPSTREAM.md",
   "VALIDATION.md",
+  "checksums/v1.4.0-rc1.sha256",
   "config/mcp-client-examples.md",
   "docs/GITHUB_PUBLISH_TUTORIAL.md",
   "docs/RELEASE_BODY.md",

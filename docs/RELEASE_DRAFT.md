@@ -1,6 +1,6 @@
 # 首次候选发行版
 
-源码提交不等于创建了 GitHub Release。本页提供已准备好的填写内容。
+本次 [v1.4.0-rc1](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1) 已作为 Pre-release 发布。本页保留填写模板，供编辑说明和以后发布新版本时参考；无需重建当前发行版。
 
 ## 复制正文时保留 Markdown
 
