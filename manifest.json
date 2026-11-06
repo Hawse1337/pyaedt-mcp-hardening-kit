@@ -1,0 +1,256 @@
+{
+  "name": "PyAEDT-MCP hardening kit",
+  "version": "1.4.0-rc1",
+  "created": "2026-11-06",
+  "upstream_base_commit": "194ef498e6efb1984cd65325e21e71087588a581",
+  "upstream_note": "Pinned upstream module validated directly (44 files; 146 post-install tests). Per-file target/dependency hashes are authoritative; unknown revisions are refused. Legacy local snapshot IDs are not upstream GitHub refs.",
+  "audited_pyaedt": "1.9.0",
+  "required_files": {
+    "aedt_target.py": [
+      "703b9a6b08818f9204105240fbb9c1440ac46f3142fc7caac5c37f030c6185d9",
+      "715db19ddfb19fa8628198409adfc58bb0e708720b22f87f38b91bbb0c915878"
+    ],
+    "aedt_installation.py": [
+      "968bf03a6f39e5c456c35d9108d3c522cc09668ac94248cd0a0a785f0eee56d1",
+      "e96f5c990e0ae78a00605805c33b44ac41b7af2aca8e674f3a6e8336fedcf35f"
+    ],
+    "aedt_guidelines.py": [
+      "dce802cf4129014e5975b147a8ac5d09dae690a157f91ab582ced4cf5f59cac7",
+      "fa693c3935ab6ccd4dc20573db5e5beb742504353a531b1203676584ccf9c068"
+    ],
+    "worker_protocol.py": [
+      "2bbec8e755c94463a2fcf4157b471d75bfb70ba3b3f87422086856fda51f0d64",
+      "db304024ec1822c4a8cdddfb61fd2a49693e04b3a4cab010e11cceffd64db7ee"
+    ],
+    "maxwell_capabilities.py": [
+      "772337dfba58e1ec7e5b234180c2f669ba55b77b6fa7bfd3c7ec56c6e1cc7d0d",
+      "79c2b670e78556c7ae0894b07c6adb9b530ac125594faeb1b24c0d4f80f22467"
+    ],
+    "maxwell_tools.py": [
+      "4be27f5ca3ea7e1d8b900dc897cb354422c25f8906f29467e0e9d15c7d439d40",
+      "a2c0674bc9be9ba6851542a0fe18f4198a1bff6c7ba4ccdedda6b9dcf3c417a8"
+    ],
+    "wr90_case.py": [
+      "73c38a0a7b85a919a4aba4faa4f1c0b20c4ed27b87df46ea71aa21c79e96840d",
+      "c2ebab5dc2cb164efe1586ad6d8788d9595410a7d8d82d48e10da7b1189cda66"
+    ]
+  },
+  "required_py_modules": [
+    "aedt_project_guard",
+    "solve_evidence"
+  ],
+  "files": {
+    "aedt_close_watcher.py": {
+      "kit_file": "files/aedt_close_watcher.py",
+      "installed_sha256": "5e3366248e9cf0b10314d04ae930c8e4381da35909a3e14c1b0effc3aa05bc13",
+      "base_sha256": "b74e1392bb5b73aea0ba59d7f8221c37f538f495e2e60bf25d59fdc7ab370e9b",
+      "compatible_sha256": [
+        "5e3366248e9cf0b10314d04ae930c8e4381da35909a3e14c1b0effc3aa05bc13",
+        "309c26720ad57ff4dc64e903abb368c546b51bd133b9b6b955e990274a7a1de3"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "5e3366248e9cf0b10314d04ae930c8e4381da35909a3e14c1b0effc3aa05bc13",
+      "new_file": false
+    },
+    "aedt_launcher.py": {
+      "kit_file": "files/aedt_launcher.py",
+      "installed_sha256": "078649c12f67b08d711b0a344543d10c394d258d292123b2d40bccfa80b5424d",
+      "base_sha256": "7fa2d3da997de21a459a2b51b1bf4df20669824944cbeb2dff98d428ef746eb9",
+      "compatible_sha256": [
+        "ffbdbbac1ef636a6c9290953d52f20090ff03e99c986775361f109e353227566"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "078649c12f67b08d711b0a344543d10c394d258d292123b2d40bccfa80b5424d",
+      "new_file": false
+    },
+    "aedt_project_guard.py": {
+      "kit_file": "files/aedt_project_guard.py",
+      "installed_sha256": "816ddcb381d687116e0842b7b9206b0759140e720796adb3456cb7105659733a",
+      "base_sha256": "1b81a4268de97f827353450b8007fd7511e98facf198def9dbc7f2b4901cfe61",
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "816ddcb381d687116e0842b7b9206b0759140e720796adb3456cb7105659733a",
+      "new_file": true
+    },
+    "mcp_server.py": {
+      "kit_file": "files/mcp_server.py",
+      "installed_sha256": "355d697601948b63a3200fa9edd6a42c376d69e44a8769e7297ad0429e1f7d11",
+      "base_sha256": "0a9b64add00a96b730a25985f5d609eb05a012b57b3aa8d82e5b5b7dd5c42724",
+      "compatible_sha256": [
+        "6a410c08ded295c9f9cd7da5554a48deeb1985e6cf91f22408061995a2cf9b54",
+        "2901cab57be95fdb376afa6fd0df6ed3f798b65688db58fe090363163bfca698"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "355d697601948b63a3200fa9edd6a42c376d69e44a8769e7297ad0429e1f7d11",
+      "new_file": false
+    },
+    "pyaedt_backend.py": {
+      "kit_file": "files/pyaedt_backend.py",
+      "installed_sha256": "0c222c3d5a51846f219ddd7d9bd2e6e92fbab8f1f8db12770952d240fed84b8b",
+      "base_sha256": "d7e81f1730636178e55602ecb4b9f0a3c1de78e88ee17f81986961f08187ec01",
+      "compatible_sha256": [
+        "9b8509cd7dec17875ca2af6b0d7bfd381c2693de0d8f8ce931afb1990392fad4"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "0c222c3d5a51846f219ddd7d9bd2e6e92fbab8f1f8db12770952d240fed84b8b",
+      "new_file": false
+    },
+    "pyaedt_capabilities.py": {
+      "kit_file": "files/pyaedt_capabilities.py",
+      "installed_sha256": "3281f29749b6641e326b71a934e24e53ec0a06ef2a0e6fea295bf5d0a153148d",
+      "base_sha256": "32e5264cb76167856167baf73f3596d86adc662f36b786a34dc1437c41e75683",
+      "compatible_sha256": [
+        "596be4dbbf9a38915e429a0c64a98ce98c1596403b880e4e13f21c87e26e61ae",
+        "65e6c70b1829c9fd82dcf825e30974d2a386f1ab8e1d402903a981f49065a296"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "3281f29749b6641e326b71a934e24e53ec0a06ef2a0e6fea295bf5d0a153148d",
+      "new_file": false
+    },
+    "pyaedt_worker.py": {
+      "kit_file": "files/pyaedt_worker.py",
+      "installed_sha256": "a7496e95772d77270cf298a565fbe1db4fb477a57c86f537702e026cde030717",
+      "base_sha256": "28b2edcc7ba576cffb50d91138600990ed36ad5649d1f43cf8686cac33fc2937",
+      "compatible_sha256": [
+        "e21b77fbc5805ab7ae20c8782af365d8e428492884562bf28210b6cc9eee99ff",
+        "540b913a71eb6b0dc6dca202f67f2d3d9b7b735192e32a40be5951e78659e094"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "a7496e95772d77270cf298a565fbe1db4fb477a57c86f537702e026cde030717",
+      "new_file": false
+    },
+    "session_discovery.py": {
+      "kit_file": "files/session_discovery.py",
+      "installed_sha256": "83ea652ff5998bbe03b992f71706d81f55490a85fc83d08e1ac856856c0ac907",
+      "base_sha256": "98437b981ef4788df6025ac69d07d033fb23080eb60e3f063ddc2c6c1ecc077f",
+      "compatible_sha256": [
+        "520b3dccb81a40a7f07f777bf8f6ae225a997cdcdeb072c4f591197f3c2df36e"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "83ea652ff5998bbe03b992f71706d81f55490a85fc83d08e1ac856856c0ac907",
+      "new_file": false
+    },
+    "solve_evidence.py": {
+      "kit_file": "files/solve_evidence.py",
+      "installed_sha256": "82fe8659778a9dc7135b074b365af34474df7c90a68c6d6ce02c02feb231225f",
+      "base_sha256": null,
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "82fe8659778a9dc7135b074b365af34474df7c90a68c6d6ce02c02feb231225f",
+      "new_file": true
+    },
+    "tests/test_aedt_close_watcher.py": {
+      "kit_file": "files/tests/test_aedt_close_watcher.py",
+      "installed_sha256": "31ffefd89b561aedff0498f13bf3a11305fd7e713ad7eeba897f097e95cae6d9",
+      "base_sha256": "ac608c4d9c87ebaec91e4f89fc87bda746c2cc2de9fa584f99d5d980140733cb",
+      "compatible_sha256": [
+        "31ffefd89b561aedff0498f13bf3a11305fd7e713ad7eeba897f097e95cae6d9",
+        "50fcd5b0cdf98587f0a928949745ca38818715080b0141a1cb90446d50f16462"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "31ffefd89b561aedff0498f13bf3a11305fd7e713ad7eeba897f097e95cae6d9",
+      "new_file": false
+    },
+    "tests/test_aedt_launcher.py": {
+      "kit_file": "files/tests/test_aedt_launcher.py",
+      "installed_sha256": "bcba3515a2342a0b398893deb108e72932dc3fd5a41d0d4cf4011b9b92614711",
+      "base_sha256": "182ba2460c3802e9933f26fdf6d25dda0ea4a1f175f084e639e666b6f10946bf",
+      "compatible_sha256": [
+        "e0c6b25c7d4193c472ed266f7b01050c71fddb9dfc14810d4454d4055fb3c980"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "bcba3515a2342a0b398893deb108e72932dc3fd5a41d0d4cf4011b9b92614711",
+      "new_file": false
+    },
+    "tests/test_launcher_hardening.py": {
+      "kit_file": "files/tests/test_launcher_hardening.py",
+      "installed_sha256": "5f3b7af9f7ed68f99b6226bec94ecc6a9fd050e5033271f0f00049074be71420",
+      "base_sha256": null,
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "5f3b7af9f7ed68f99b6226bec94ecc6a9fd050e5033271f0f00049074be71420",
+      "new_file": true
+    },
+    "tests/test_official_capabilities.py": {
+      "kit_file": "files/tests/test_official_capabilities.py",
+      "installed_sha256": "6b0b953e322157149f17bf3086b639a0a6be9355b31025c5c7ff9c7ef3ba0cc2",
+      "base_sha256": "d5e94996b3765e30eb250bcc74ab8c3d9c3ce2c1f5bea5bf0341df3ccf759d58",
+      "compatible_sha256": [
+        "cb9fa1ae21dd7bb1d77827cadcc2fa80a697d79d742bad47dec6205d386a6b8b",
+        "a1f4ceceffcd996c7232c728b131962fba38eaafad21f199c398503c6905c949"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "6b0b953e322157149f17bf3086b639a0a6be9355b31025c5c7ff9c7ef3ba0cc2",
+      "new_file": false
+    },
+    "tests/test_project_guard.py": {
+      "kit_file": "files/tests/test_project_guard.py",
+      "installed_sha256": "aab8679fee029822833d1111d8d63517f726edee9740be030c426f1033d520bf",
+      "base_sha256": "5939095bfd242c8e0be40705846929e9713143d2b54936b97c0a4ae26416467b",
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "aab8679fee029822833d1111d8d63517f726edee9740be030c426f1033d520bf",
+      "new_file": true
+    },
+    "tests/test_solve_evidence.py": {
+      "kit_file": "files/tests/test_solve_evidence.py",
+      "installed_sha256": "05eda4bd768619baee175c6ebc68b3bf85b0825c40156991916c8072f03d6ccc",
+      "base_sha256": null,
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "05eda4bd768619baee175c6ebc68b3bf85b0825c40156991916c8072f03d6ccc",
+      "new_file": true
+    },
+    "tests/test_worker_process.py": {
+      "kit_file": "files/tests/test_worker_process.py",
+      "installed_sha256": "c0bfabb6eb784809739d3b987b9f6b7b9d423d43605b05f3d632b93d8f997cd7",
+      "base_sha256": "aafe258cbb39c90737d154c694f5631847dca7805b81bef2f5b78d470cfabccb",
+      "compatible_sha256": [
+        "f35a531669f75127197249031ec5ed6726400ead045f311821fcf3a6b2bf02a1"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "c0bfabb6eb784809739d3b987b9f6b7b9d423d43605b05f3d632b93d8f997cd7",
+      "new_file": false
+    },
+    "tests/test_worker_timeouts.py": {
+      "kit_file": "files/tests/test_worker_timeouts.py",
+      "installed_sha256": "d479ff4fea72a6c236718139e8dafc7072e7a4e79beda002b77b43a922db64d6",
+      "base_sha256": null,
+      "compatible_sha256": [],
+      "text_lf": true,
+      "installed_lf_sha256": "d479ff4fea72a6c236718139e8dafc7072e7a4e79beda002b77b43a922db64d6",
+      "new_file": true
+    },
+    "worker_client.py": {
+      "kit_file": "files/worker_client.py",
+      "installed_sha256": "6faf345c8579af23d30f30a9cd36b956ab2548a0677722e9997d7192378d5a00",
+      "base_sha256": "1bb63c6874c2da270a638359b39eb60dc94048ba42ce7a23c76afb86070b00a0",
+      "compatible_sha256": [
+        "56ead0466f00109e5c51f2f006bcb57c19cfcb73514f9869cb955c0bddf0b258"
+      ],
+      "text_lf": true,
+      "installed_lf_sha256": "6faf345c8579af23d30f30a9cd36b956ab2548a0677722e9997d7192378d5a00",
+      "new_file": false
+    }
+  },
+  "tests": [
+    "tests.test_aedt_close_watcher",
+    "tests.test_aedt_launcher",
+    "tests.test_launcher_hardening",
+    "tests.test_official_capabilities",
+    "tests.test_project_guard",
+    "tests.test_solve_evidence",
+    "tests.test_worker_process",
+    "tests.test_worker_timeouts"
+  ],
+  "kit_tests": [
+    "test_kit_installer_safety.py",
+    "test_kit_deployment_compatibility.py",
+    "test_kit_release.py"
+  ],
+  "upstream_repository": "https://github.com/Cai-aa/CAE-Agent-Hub",
+  "upstream_subdirectory": "MCP/Ansys/AEDT MCP",
+  "legacy_local_base_commit": "f6173fc",
+  "upstream_license": "MIT",
+  "upstream_license_copyright": "Copyright (c) 2026 Thompson Labs"
+}
