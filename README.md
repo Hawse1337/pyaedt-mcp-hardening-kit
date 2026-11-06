@@ -2,7 +2,7 @@
 
 Reliability patches for a pinned legacy AEDT MCP: bounded startup, timeout recovery, project guards, and solve evidence.
 
-**针对 [https://github.com/Cai-aa/CAE-Agent-Hub/tree/194ef498e6efb1984cd65325e21e71087588a581/MCP/Ansys/AEDT%20MCP](https://github.com/Cai-aa/CAE-Agent-Hub/tree/194ef498e6efb1984cd65325e21e71087588a581/MCP/Ansys/AEDT%20MCP) 的固定旧版本；不是完整 MCP 服务，也不表示兼容所有同名项目。**
+**针对 [CAE-Agent-Hub / AEDT MCP](https://github.com/Cai-aa/CAE-Agent-Hub/tree/194ef498e6efb1984cd65325e21e71087588a581/MCP/Ansys/AEDT%20MCP) 的固定旧版本；不是完整 MCP 服务，也不表示兼容所有同名项目。**
 
 | 项目 | 当前状态 |
 |---|---|
@@ -17,7 +17,7 @@ Reliability patches for a pinned legacy AEDT MCP: bounded startup, timeout recov
 
 **v1.4.0-rc1 · 2026-11-06 · 发布候选版**
 
-这是针对指定旧版 AEDT MCP 源码的加固补丁，包含可审查的 Python 载荷、安装器和离线回归测试。它不是完整 MCP 服务，也不包含 AEDT、PyAEDT 或软件许可证。
+这是针对指定旧版 AEDT MCP 源码的加固补丁，包含可审查的 Python 载荷、安装器和离线回归测试。它不是完整 MCP 服务；使用者仍需自行安装外部依赖并具备有效的 AEDT 软件授权。
 
 本版集中处理连接失败反复拉起进程、请求超时后重复执行，以及误把 API 成功或旧结果当作求解完成的问题。安装器同时改进了版本识别、换行符兼容和失败恢复。
 
