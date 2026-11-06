@@ -13,6 +13,8 @@
   "VALIDATION.md",
   "config/mcp-client-examples.md",
   "docs/GITHUB_PUBLISH_TUTORIAL.md",
+  "docs/RELEASE_BODY.md",
+  "docs/RELEASE_BODY.txt",
   "docs/RELEASE_DRAFT.md",
   "docs/RELEASE_NOTES_1.4.md",
   "files/aedt_close_watcher.py",

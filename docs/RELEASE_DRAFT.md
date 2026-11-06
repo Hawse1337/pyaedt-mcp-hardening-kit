@@ -2,6 +2,12 @@
 
 源码提交不等于创建了 GitHub Release。本页提供已准备好的填写内容。
 
+## 复制正文时保留 Markdown
+
+请使用 [纯正文文件](RELEASE_BODY.md) 的 **Copy raw file** 按钮，或打开 [TXT 原文](https://raw.githubusercontent.com/Hawse1337/pyaedt-mcp-hardening-kit/main/docs/RELEASE_BODY.txt) 后全选复制。不要在本页渲染后的段落上直接拖选复制，否则标题的 `##` 和列表的 `-` 可能丢失。
+
+将完整原文粘贴到 Release 的说明编辑框，再切换 **Preview** 检查。正文只包含标题、段落和普通列表；不需要复制本页的操作提示。ZIP 已上传时不必重复上传，也不必在正文里再次粘贴附件链接。
+
 打开 [创建发行版](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/new)，填写：
 
 - Tag：`v1.4.0-rc1`，Target：包含本候选源码的 `main`。
