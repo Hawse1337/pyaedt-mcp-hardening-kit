@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2 — 2026-11-20
+
+- This repository now publishes the guard release directly; upstream reference is the official
+  PyAEDT-MCP (https://github.com/ansys/pyaedt-mcp).
+- Assets: wheel, sdist, source archive, checksums.
+- Legacy v1.4.0-rc1 kit release remains available but is no longer maintained.
+
 ## 1.4.0-rc1 — 2026-11-06
 
 发布候选版，完整验证范围见 [VALIDATION.md](VALIDATION.md)。已完成一次独立空白桌面的实机连接烟测，求解、建模和长跑回归尚未完成。
