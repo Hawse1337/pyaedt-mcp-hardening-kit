@@ -115,6 +115,14 @@ agent 在 guard 不在执行链路上时直接用 shell 启动了 `ansysedt.exe`
 | 威胁模型 | https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/THREAT_MODEL.md |
 | 客户端接入（DSH / Codex） | https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/CLIENTS.md |
 
+## 新增能力：自主建模 un_approved_builder\（v0.3.2 同版本重建，2026-11-21）
+
+- 人批准 builder 能力一次；AI 在参数范围内反复运行，**不需要逐次开启** \AEDT_MCP_ALLOW_ARBITRARY_CODE\。
+- allowlist：脚本 SHA-256 + 参数 schema + 输出根目录；MCP/worker 双重校验。
+- 唯一工作副本，不修改原工程；受管 AEDT + 审计。
+- 文档：https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/BUILDERS.md
+- 安全边界：allowlist/脚本是同用户完整性控制，不是 OS 沙箱。
+
 ## 安全边界（请先读）
 
 守卫是**生命周期与证据层的完整性控制，不是操作系统沙箱**：
