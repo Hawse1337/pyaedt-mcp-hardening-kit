@@ -1,5 +1,21 @@
 # PyAEDT-MCP Hardening Kit
 
+> ## 当前守卫发布：v0.3.2（2026-11-20）
+>
+> 本仓库是**守卫代码的发布地址**。最新完整守卫系统发布为 **v0.3.2**，资产在本仓库的
+> [v0.3.2 release](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v0.3.2)：
+>
+> - `ansys_aedt_mcp-0.3.2-py3-none-any.whl` / `.tar.gz`（PyAEDT 1.10.0，AEDT 2026 R1）
+> - `ansys-aedt-mcp-0.3.2-source.zip`（完整源码快照）
+>
+> 完整开发仓库：https://github.com/Hawse1337/ansys-aedt-mcp
+>
+> v0.3.2 是安全加固版（真实 agent 绕过守卫事件后）：managed-only AEDT 会话、未受管会话检测、
+> 默认关闭任意代码、run-token 作用域、审计启动/释放事件、PyAEDT app 身份校验，并附
+> [THREAT_MODEL](https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/THREAT_MODEL.md)
+> 与 [CLIENTS](https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/CLIENTS.md)（DSH/Codex
+> fail-closed 配置）。下方保留 v1.x 旧版"加固补丁套件"内容，仅用于历史复现。
+
 **已发布预览版：[v1.4.0-rc1](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1)**
 
 [下载 ZIP 安装包](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/download/v1.4.0-rc1/pyaedt-mcp-hardening-kit-v1.4.0-rc1.zip) · [下载 SHA256 校验文件](https://raw.githubusercontent.com/Hawse1337/pyaedt-mcp-hardening-kit/main/checksums/v1.4.0-rc1.sha256) · [查看发行说明](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.4.0-rc1)
