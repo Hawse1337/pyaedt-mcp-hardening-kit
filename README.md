@@ -21,30 +21,50 @@
 
 本仓库只负责发布：每个版本附带 wheel、sdist、完整源码快照与 SHA-256 校验和。
 
-## 当前发布：v0.3.2（2026-11-20）
+## 当前发布：v1.6.1（2026-11-26）
 
-[v0.3.2 release](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v0.3.2)
+[v1.6.1 release](https://github.com/Hawse1337/pyaedt-mcp-hardening-kit/releases/tag/v1.6.1)
 包含：
 
 | 资产 | 用途 |
 |---|---|
-| `ansys_aedt_mcp-0.3.2-py3-none-any.whl` | Python wheel（安装到 guard 的虚拟环境） |
-| `ansys_aedt_mcp-0.3.2.tar.gz` | sdist（从源码构建） |
-| `ansys-aedt-mcp-0.3.2-source.zip` | 完整源码快照（与 tag 一致） |
-| `v0.3.2.SHA256SUMS.txt` | 上述文件的 SHA-256 |
+| `ansys_aedt_mcp-1.6.1-py3-none-any.whl` | Python wheel（安装到 guard 的虚拟环境） |
+| `ansys_aedt_mcp-1.6.1.tar.gz` | sdist（从源码构建） |
+| `ansys-aedt-mcp-1.6.1-source.zip` | 完整源码快照（与 guard v1.6.1 tag 一致） |
+| `AEDT.Builder.Approver.exe` | Windows builder approval GUI v1.7.1 |
+| `v1.6.1.SHA256SUMS.txt` | 上述文件的 SHA-256 |
 
 ### 快速安装
 
 ```powershell
 py -3.10 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -U pip
-.\.venv\Scripts\python.exe -m pip install "ansys_aedt_mcp-0.3.2-py3-none-any.whl"
+.\.venv\Scripts\python.exe -m pip install "ansys_aedt_mcp-1.6.1-py3-none-any.whl"
 ```
 
 要求：Python 3.10+、PyAEDT 1.10.0、AEDT 2026 R1。MCP 客户端配置见
 [源仓库的 CLIENTS 指南](https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/CLIENTS.md)。
 
-## v0.3.2 改进了什么
+## v1.6.1 新增与修复
+
+v1.6.1 以 v0.3.2 的 managed-session/fail-closed 安全基础为底座，补齐原生 AEDT
+建模、报告与远场球能力：
+
+- **attach-by-port 修复**：不再向已验证的 gRPC 会话传旧 version，修复
+  `version specified ... doesn't correspond to the pid` 假错误；`open_project` /
+  `export_report_image` 恢复可用。
+- **`report_specs`**：任意只读原生 AEDT report（category / expression / plot type /
+  variations / context），不需要 arbitrary code 或 builder 审批。
+- **`overlay_specs`**：用原生 `CopyTracesData` + `PasteTraces` 把不同 primary sweep 的
+  E/H 曲线放进一张原生报告。
+- **`keep_report=True`**：保留报告 → 保存/重开工程 → `report_name` 导出，清除
+  pasted-trace 选中高亮，解决 live/imported trace 一条偏浅。
+- **`set_infinite_sphere`**：零审批远场采样范围编辑；`requires_resolve=false`，不重跑 FEM。
+- **`abort_analysis`**：MCP 工具暴露，可干净停止指定目标的求解。
+- **首次 builder 注册**：`request_type="new_builder"`，审批元数据修复，GUI v1.7.1。
+- 离线测试：**525 passed, 1 skipped, 118 subtests**。
+
+## v0.3.2 安全基础（历史）
 
 v0.3.2 是**真实 agent 绕过守卫事件**之后的安全加固版。当时的问题不是 guard 被攻破，而是
 agent 在 guard 不在执行链路上时直接用 shell 启动了 `ansysedt.exe` 并驱动 PyAEDT。这一版把
@@ -100,10 +120,10 @@ agent 在 guard 不在执行链路上时直接用 shell 启动了 `ansysedt.exe`
 
 ### 8. 验证
 
-- 守卫离线测试：**469 passed, 1 skipped, 118 subtests**；
+- 守卫离线测试：**525 passed, 1 skipped, 118 subtests**；
 - 实机（AEDT 2026 R1 / PyAEDT 1.10.0）：未受管 PID 被拒绝；guard 启动的会话 `managed: true`
   可挂载、可关闭；`run_python_code` 返回 `refused`；
-- 本仓库 v0.3.2 资产提供完整源码快照，可与 tag 对照。
+- 本仓库 v1.6.1 资产提供完整源码快照，可与 guard tag 对照。
 
 ## 上游与参考
 
@@ -115,7 +135,7 @@ agent 在 guard 不在执行链路上时直接用 shell 启动了 `ansysedt.exe`
 | 威胁模型 | https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/THREAT_MODEL.md |
 | 客户端接入（DSH / Codex） | https://github.com/Hawse1337/ansys-aedt-mcp/blob/main/docs/CLIENTS.md |
 
-## 新增能力：自主建模 un_approved_builder\（v0.3.2 同版本重建，2026-11-21）
+## 自主建模 builder（v1.6.1）
 
 - 人批准 builder 能力一次；AI 在参数范围内反复运行，**不需要逐次开启** \AEDT_MCP_ALLOW_ARBITRARY_CODE\。
 - allowlist：脚本 SHA-256 + 参数 schema + 输出根目录；MCP/worker 双重校验。
@@ -135,8 +155,7 @@ agent 在 guard 不在执行链路上时直接用 shell 启动了 `ansysedt.exe`
 
 ## 历史版本
 
-仓库中的 `v1.4.0-rc1` 及更早 release 是旧的加固补丁套件，仅保留用于历史复现，不再维护。
-新部署请使用 v0.3.2 资产。
+仓库中的 `v0.3.2`、`v1.4.0-rc1` 及更早 release 保留用于历史复现；新部署请使用 v1.6.1 资产。
 
 ## License
 

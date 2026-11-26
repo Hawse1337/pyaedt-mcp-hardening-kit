@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.1 — 2026-11-26
+
+- Published the ansys-aedt-mcp 1.6.1 guard release (wheel/sdist/source/GUI/SHA256SUMS).
+- Native report freedom: `report_specs`, `overlay_specs`, `keep_report` equal-brightness reopen flow.
+- `set_infinite_sphere` zero-approval far-field sampling; `abort_analysis` MCP tool.
+- First builder registration and approval metadata fixes; GUI v1.7.1.
+- Offline suite: 525 passed, 1 skipped, 118 subtests.
+
 ## 0.3.2 — 2026-11-20
 
 - This repository now publishes the guard release directly; upstream reference is the official
